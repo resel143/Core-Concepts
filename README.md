@@ -124,30 +124,13 @@ This repository is dedicated to storing **core concepts** and **fundamental topi
 - React: Suspense & Lazy loading, React Profiler
 - Node.js: Clustering, Worker Threads, Child Processes, EventEmitter advanced
 - Next.js: Middleware advanced, Custom `_document` & `_app`, API rate limiting  
-
----
-
-## How to Use This Repository
-
-- **Create folders for each technology** (JavaScript, React, Node, Next.js)  
-- Inside each folder, **create separate markdown files** for each concept  
-- Include **explanations, examples, edge cases, and common interview questions**  
-- Keep updating with **new core concepts**  
-
----
-
-## Contributing
-
-1. Fork the repository  
-2. Add new concepts or improve explanations  
-3. Create a PR with clear description  
-4. Follow existing structure and naming conventions  
+structure and naming conventions  
 
 ---
 
 ## License
 
-MIT License © [Your Name]
+MIT License © [Reshul Wate]
 
 ---
 
