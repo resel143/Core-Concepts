@@ -8,15 +8,48 @@ const employees = [
   { id: 7, name: "Vikram", age: 32, department: "Finance", salary: 65000, experience: 6 }
 ];
 
-// Q6 - Sort by department (A–Z) then salary (desc)
-let sortedArr = [...employees].sort((a,b)=>{
-    if(a.department !== b.department){
-        return a.department.localeCompare(b.department)
-    }
-    return b.salary - a.salary
-})
+// Q8 - department that costs the most in salaries.
+let highestSalDept = {};
 
-console.log(sortedArr)
+highestSalDept = employees.reduce((acc, emp)=>{
+    if(acc[emp.department]){
+        acc[emp.department] += emp.salary
+
+    }else{
+        acc[emp.department] = emp.salary;
+    }
+    return acc;
+},{})
+let department = "", salary =0;
+for(let item in highestSalDept){
+    if(highestSalDept[item] > salary){
+        salary = highestSalDept[item];
+        department = item
+    }
+}
+console.log(department)
+
+
+
+// Q7 - Promote employees (without mutation): Exp>=5 = +20% Exp<5 +10%
+// let promotedEmployees = {};
+
+// promotedEmployees = employees.map((item)=>{
+//     const increment = item.experience >=5 ? 1.2 : 1.1;
+//     return {...item, salary:item.salary * increment};
+// })
+
+// console.log(promotedEmployees)
+
+// Q6 - Sort by department (A–Z) then salary (desc)
+// let sortedArr = [...employees].sort((a,b)=>{
+//     if(a.department !== b.department){
+//         return a.department.localeCompare(b.department)
+//     }
+//     return b.salary - a.salary
+// })
+
+// console.log(sortedArr)
 
 
 
@@ -24,24 +57,24 @@ console.log(sortedArr)
 // O/p - object - {department: name}
 let mostExpPerDept = {};
 
-mostExpPerDept = employees.reduce((acc, emp)=>{
+// mostExpPerDept = employees.reduce((acc, emp)=>{
 
-        if(acc[emp.department]){
-            if(emp.experience > acc[emp.department].experience) {
-                acc[emp.department] = {name: emp.name, expirence: emp.experience}
-            }
-        }else{
-            acc[emp.department] = {name: emp.name, experience: emp.experience}
-        }
+//         if(acc[emp.department]){
+//             if(emp.experience > acc[emp.department].experience) {
+//                 acc[emp.department] = {name: emp.name, expirence: emp.experience}
+//             }
+//         }else{
+//             acc[emp.department] = {name: emp.name, experience: emp.experience}
+//         }
 
-        return acc
+//         return acc
 
-},{})
+// },{})
 
 
-for(let item in mostExpPerDept){
-    mostExpPerDept[item] = mostExpPerDept[item].name
-}
+// for(let item in mostExpPerDept){
+//     mostExpPerDept[item] = mostExpPerDept[item].name
+// }
 
 // console.log(mostExpPerDept)
 
