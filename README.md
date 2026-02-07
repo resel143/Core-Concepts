@@ -1,4 +1,4 @@
-# Core Concepts
+# Core Concepts in React JS, Next JS, and Node JS
 
 This repository is dedicated to storing **core concepts** and **fundamental topics** in **JavaScript, React JS, Node.js, and Next.js**. The goal is to have a single reference for **conceptual clarity**, and **real-world application**.  
 
